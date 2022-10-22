@@ -13,6 +13,7 @@
 #
 ##
 def armstrong_number(number):
+    """Output if a given number is an armstrong number."""
     try:
         # Split each digit of input into list
         split_number = [int(x) for x in str(number)]
