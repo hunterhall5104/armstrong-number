@@ -1,0 +1,34 @@
+##
+# Summary - Armstrong numbers
+# Architects - Hunter Hall
+# Developed by - Hunter Hall
+# Date - 10/21/2022
+# Initial Version - 0.2
+# Description - This algorithm takes input and tells whether a number is an armstrong number or not.
+#
+# Modified by:
+# Modified date:
+# Version -
+# Description:
+#
+##
+def armstrong_number(number):
+    """Output if a given number is an armstrong number."""
+    try:
+        # Split each digit of input into list
+        split_number = [int(x) for x in str(number)]
+        # Gives the amount of numbers in the list
+        x = len(split_number)
+        # Expoent of each number in the list by "x"
+        exponent_lst = [item ** x for item in split_number]
+        # sum of every number in the list after the exponent is given
+        total = sum(exponent_lst)
+        # Checking if orginal input and sum after algorithm are equal
+        [print(f"{number} is an Armstrong number") if total == int(number) else print(
+            f"{number} is not an Armstrong number")]
+    except Exception as e:
+        print("Armstrong number - Error Occured" + str(e))
+
+
+number = input("Enter a number: ")
+armstrong_number(number)
